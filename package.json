@@ -1,0 +1,13 @@
+{
+  "name": "pbt-email",
+  "version": "1.0.0",
+  "description": "email spike",
+  "scripts": {
+    "prebuild": "rm -rf ./build && rm -f ./package.zip",
+    "build": "cp -r ./lambda ./build",
+    "package": "cd ./build && zip -r ../package.zip . * ;",
+    "publishaws": "sh ./build-scripts/publishaws.sh"
+  },
+  "author": "tim.borrowdale",
+  "license": "ISC"
+}

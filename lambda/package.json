@@ -1,0 +1,10 @@
+{
+  "name": "pbt-lambda",
+  "version": "1.0.0",
+  "description": "lambda function for pbt-email",
+  "author": "tim.borrowdale",
+  "license": "ISC",
+  "dependencies": {
+    "mssql": "^4.1.0"
+  }
+}
