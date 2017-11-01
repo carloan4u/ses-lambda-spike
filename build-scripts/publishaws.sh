@@ -1,7 +1,6 @@
+cd lambda/
 npm i
-cd ./lambda
-npm i
-cd ../
+cd ..
 npm run build
 npm run package
-aws lambda update-function-code --function-name parseEmail --zip-file fileb://c:\\Users\\tim.borrowdale\\Code\\pbt-email\\package.zip
+aws lambda update-function-code --function-name processEmail --zip-file fileb://c:\\Users\\tim.borrowdale\\Code\\pbt-email\\package.zip --region eu-west-1

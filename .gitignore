@@ -58,3 +58,5 @@ typings/
 .env
 
 lambda/config/db.credentials.js
+package.zip
+build/config/db.credentials.js

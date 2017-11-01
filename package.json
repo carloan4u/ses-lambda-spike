@@ -6,7 +6,8 @@
     "prebuild": "rm -rf ./build && rm -f ./package.zip",
     "build": "cp -r ./lambda ./build",
     "package": "cd ./build && zip -r ../package.zip . * ;",
-    "publishaws": "sh ./build-scripts/publishaws.sh"
+    "publishaws": "sh ./build-scripts/publishaws.sh",
+    "start": "sh ./build-scripts/run.sh"
   },
   "author": "tim.borrowdale",
   "license": "ISC"

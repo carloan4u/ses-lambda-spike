@@ -5,8 +5,8 @@
   "author": "tim.borrowdale",
   "license": "ISC",
   "dependencies": {
+    "mssql": "^4.1.0",
     "aws-sdk": "^2.141.0",
-    "mailparser": "^2.1.0",
-    "mssql": "^4.1.0"
+    "mailparser": "^2.1.0"
   }
 }

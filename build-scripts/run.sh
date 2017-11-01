@@ -1,0 +1,1 @@
+DEBUG=true node lambda/index.js
