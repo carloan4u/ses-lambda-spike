@@ -1,5 +1,6 @@
 var slsw          = require('serverless-webpack');
 var nodeExternals = require('webpack-node-externals');
+var path          = require('path');
 
 module.exports = {
   entry: slsw.lib.entries,
@@ -14,7 +15,17 @@ module.exports = {
     rules: [{
       test: /\.js$/,
       loader: 'babel-loader',
-      include: __dirname,
+      options: {
+        plugins: [
+          require.resolve("babel-plugin-source-map-support"), 
+          require.resolve("babel-plugin-transform-runtime")
+        ],
+        presets: [
+          require.resolve("babel-preset-es2015"), 
+          require.resolve("babel-preset-stage-3")
+        ]
+      },
+      include: [__dirname,path.join(__dirname, '../shared')],
       exclude: /node_modules/,
     }]
   }

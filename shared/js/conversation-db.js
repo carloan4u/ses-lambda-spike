@@ -1,5 +1,5 @@
 import sql from 'mssql';
-import dbConfig from '../config/db.config';
+import dbConfig from './config/db.config';
 
 export default class ConversationDb {
 

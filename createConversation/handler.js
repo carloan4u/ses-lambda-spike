@@ -1,8 +1,8 @@
-import ConversationDb from './js/conversation-db';
+import ConversationDb from '../shared/js/conversation-db';
 import generateHash from './js/conversation-hash-generator';
+import sendEmail from '../shared/js/email-sender';
 
 import sql from 'mssql';
-import dbConfig from './config/db.config';
 
 const conversationDb = new ConversationDb();
 
@@ -10,8 +10,7 @@ export const hello = async (event, context, callback) => {
 
   var conversation = await _createConversation(event.yourEmail, event.theirEmail);
   await conversationDb.saveNewMessage(conversation.conversationId, conversation.customerId, null, event.message);
-  //add message
-  //send email
+  sendEmail(event.theirEmail, conversation.conversationId, event.message);
 
   conversationDb.close();
   callback(null, { conversationId: conversation.conversationId });

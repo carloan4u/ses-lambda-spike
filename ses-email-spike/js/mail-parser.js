@@ -1,4 +1,4 @@
-const subjectConversationIdRegex = /^.*\(#([0-9]+)\).*$/;
+const subjectConversationIdRegex = /^.*\[#([0-9A-z]+)\].*$/;
 
 export default class MailParser {
   parse(mail) {

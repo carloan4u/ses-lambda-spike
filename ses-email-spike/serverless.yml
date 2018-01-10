@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: ses-email-spike # NOTE: update this with your service name
+service: processEmail # NOTE: update this with your service name
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
